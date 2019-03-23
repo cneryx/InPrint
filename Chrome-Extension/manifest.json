@@ -1,0 +1,11 @@
+{
+  "name": "InPrint",
+  "description": "Kill me",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+  }
+}
