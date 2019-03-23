@@ -1,0 +1,14 @@
+FACEBOOK LOGINS:
+
+Email/Phone
+id="email"
+
+Password
+id="pass"
+
+GITHUB LOGIN:
+Login:
+id="login_field"
+
+Password:
+id="password"

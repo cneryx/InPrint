@@ -1,0 +1,16 @@
+{
+  "name": "Web-Scraper-Util",
+  "description": "Gets ALL input form fields",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Prepare to Scrape"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [{
+        "js": ["scraperUtil.js"],
+      "matches": ["https://*/*", "http://*/*"]
+  }]
+}
