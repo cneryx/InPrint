@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF88FF"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,52 +19,62 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
     <Button
         android:id="@+id/ipEnterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleIp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="292dp"
         android:elevation="0dp"
         android:text="Enter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ipEnter"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="326dp"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/ipEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="177dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=" "
         app:layout_constraintBottom_toTopOf="@+id/ipEnterButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleIp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleIp"
         android:layout_width="wrap_content"
         android:layout_height="54dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="139dp"
         android:text="Please Enter Your IP"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/ipEnter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/message"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />;
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="30dp" />
+    tools:layout_editor_absoluteX="38dp"
+    tools:layout_editor_absoluteY="30dp" />
 
 </android.support.constraint.ConstraintLayout>
