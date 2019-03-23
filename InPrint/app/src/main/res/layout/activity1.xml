@@ -32,7 +32,7 @@
         app:menu="@menu/navigation" />
 
     <Button
-        android:id="@+id/ipEnterButton"
+        android:id="@+id/dataEnterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleIp"
@@ -53,7 +53,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=" "
-        app:layout_constraintBottom_toTopOf="@+id/ipEnterButton"
+        app:layout_constraintBottom_toTopOf="@+id/dataEnterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
