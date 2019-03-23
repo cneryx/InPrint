@@ -8,10 +8,17 @@
   },
   "permissions": [
       "http://127.0.0.1:3000/",
-      "tabs"
+      "tabs",
+      "webRequest"
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  }
+  "content_scripts": [
+    {
+      "js": [
+        "background.js"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }]
 }

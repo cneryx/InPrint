@@ -1,6 +1,13 @@
-var xhr = new XMLHttpRequest();
+var data = {greeting: 'hello!'};
 
-xhr.open("GET", "http://127.0.0.1:3000/", false);
-xhr.send();
+fetch("http://127.0.0.1:5000/test.json", {
+    headers:{
+        'Content-Type': 'application/json'
+    }})
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(text) {
+        console.log(text);
+    });
 
-var result = xhr.responseText;
