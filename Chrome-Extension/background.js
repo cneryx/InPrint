@@ -11,7 +11,7 @@ getServerData();
 var constantLoop = setInterval(getServerData, 3000);
 
 function getServerData() {
-    fetch("http://127.0.0.1:5000/test.html", {
+    fetch("http://127.0.0.1:5001/get_logins", {
         headers: {
             'Content-Type': 'application/json'
         }
