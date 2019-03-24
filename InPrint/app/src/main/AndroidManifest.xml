@@ -19,7 +19,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,13 +28,16 @@
         </activity>
         <activity
             android:name=".Activity1"
-            android:label="Fingerprint"></activity>
+            android:label="Fingerprint"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Activity2"
-            android:label="Login"></activity>
+            android:label="Login"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".beforeLogins"
-            android:label="iwannasleep"></activity>
+            android:label="iwannasleep"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

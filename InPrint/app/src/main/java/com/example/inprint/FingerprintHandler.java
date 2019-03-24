@@ -49,12 +49,12 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     //onAuthenticationSucceeded is called when a fingerprint has been successfully matched to one of the fingerprints stored on the user’s device//
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
         if (Activity2.getAppcontext() != null) {
-            Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+           // Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
             authenticed = true;
             BackgroundWorker bw = new BackgroundWorker();
             bw.execute();
         } else {
-            Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+           // Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
             authenticed = true;
         }
     }
