@@ -27,12 +27,15 @@
         android:layout_width="362dp"
         android:layout_height="682dp"
         android:layout_above="@id/navigation"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="7dp"
         android:background="#000000"
         android:src="@drawable/loading"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fingerprintview"
