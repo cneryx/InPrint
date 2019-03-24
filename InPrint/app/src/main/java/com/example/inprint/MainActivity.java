@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Activity2.context = getApplicationContext();
         mTextMessage = (TextView) findViewById(R.id.message);
         //when user presses a button
-        Button button = (Button) findViewById(R.id.dataEnterButton);
+        ImageButton button = (ImageButton) findViewById(R.id.dataEnterButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Activity1.class);
