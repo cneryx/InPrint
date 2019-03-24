@@ -102,14 +102,5 @@ public class Activity2 extends AppCompatActivity {
 
             }
         });
-        Button credmenu = findViewById(R.id.credmenu);
-        credmenu.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Activity2.this, ListCred.class);
-                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(intent);
-
-            }
-        });
     }
 }

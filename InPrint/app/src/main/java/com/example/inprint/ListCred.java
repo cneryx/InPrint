@@ -28,23 +28,6 @@ public class ListCred extends AppCompatActivity {
 
             }
         });
-        int n = 0;
-        File readsaves = new File(Activity2.getAppcontext().getFilesDir(), "readsaves.txt");
-        String[]items;
-        String con = "";
-        try{
-           Scanner input = new Scanner(readsaves);
-           while(input.hasNextLine()){
-               con += input.nextLine();
-           }
-            input.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        items = con.split("\\\\r?\\\\n");
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.cred_list,items);
-        ListView Credlist = (ListView) findViewById(R.id.credlist);
-        Credlist.setAdapter(adapter);
     }
 }
