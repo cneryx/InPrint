@@ -28,29 +28,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleIp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="76dp"
         android:elevation="0dp"
         android:text="Enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/titleIp"
-        android:layout_width="292dp"
+        android:layout_width="367dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:text="Credentials:"
+        android:fontFamily="sans-serif-medium"
+        android:text="CREDENTIALS:"
         android:textAlignment="center"
         android:textColor="#DDDDDD"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/editText"

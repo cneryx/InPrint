@@ -51,7 +51,7 @@ public class Activity1 extends AppCompatActivity {
                 case R.id.navigation_home:
                     return true;
                 case R.id.navigation_dashboard:
-                    Intent intent = new Intent(Activity1.this, Activity2.class);
+                    Intent intent = new Intent(Activity1.this, beforeLogins.class);
                     intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;

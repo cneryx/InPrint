@@ -50,11 +50,11 @@ public class beforeLogins extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    return true;
-                case R.id.navigation_dashboard:
-                    Intent intent = new Intent(beforeLogins.this, Activity2.class);
+                    Intent intent = new Intent(beforeLogins.this, Activity1.class);
                     intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
+                    return true;
+                case R.id.navigation_dashboard:
                     return true;
             }
             return false;
@@ -125,11 +125,10 @@ public class beforeLogins extends AppCompatActivity {
         while(true) {
             if(helper.isAuthenticed()) {
                 GifImageView img = (GifImageView) findViewById(R.id.gifImageView);
-                if (!done) {
-                    img.setImageResource(R.drawable.correct);
-                    done = true;
-                }
-                img.setImageResource(R.drawable.correcthold);
+                done = true;
+                Intent intent = new Intent (beforeLogins.this, Activity2.class);
+                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
                 break;
             }
         }
