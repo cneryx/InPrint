@@ -11,12 +11,9 @@ getServerData();
 var constantLoop = setInterval(getServerData, 3000);
 
 function getServerData() {
-    fetch("http://127.0.0.1:5001/get_logins", {
+    fetch("http://127.0.0.1:5001/get_logins?key=BI7CNe3T15ukeqOWaCnN", {
         headers: {
             'Content-Type': 'application/json'
-        },
-        params : {
-            "key": "BI7CNe3T15ukeqOWaCnN"
         }
     })
         .then(function (response) {
