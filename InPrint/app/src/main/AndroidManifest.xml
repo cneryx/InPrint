@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.inprint">
+
     <uses-feature android:name="android.hardware.fingerprint" />
-    <uses-feature android:name="android.permission.USE_BIOMETRIC"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.permission.USE_BIOMETRIC" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name = "android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -23,16 +27,13 @@
         </activity>
         <activity
             android:name=".Activity1"
-            android:label="Fingerprint" >
-        </activity>
+            android:label="Fingerprint"></activity>
         <activity
             android:name=".Activity2"
-            android:label="Login" >
-        </activity>
+            android:label="Login"></activity>
         <activity
             android:name=".beforeLogins"
-            android:label="iwannasleep">
-        </activity>
+            android:label="iwannasleep"></activity>
     </application>
 
 </manifest>
