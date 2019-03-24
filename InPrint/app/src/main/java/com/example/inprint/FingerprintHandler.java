@@ -31,14 +31,14 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         //I’m going to display the results of fingerprint authentication as a series of toasts.
         //Here, I’m creating the message that’ll be displayed if an error occurs//
 
-        Toast.makeText(context, "Authentication error\n" + errString, Toast.LENGTH_LONG).show();
+        //0Toast.makeText(context, "Authentication error\n" + errString, Toast.LENGTH_LONG).show();
     }@Override
     public void onAuthenticationFailed() {
-        Toast.makeText(context, "Authentication failed", Toast.LENGTH_LONG).show();
+       // Toast.makeText(context, "Authentication failed", Toast.LENGTH_LONG).show();
     }
     @Override
     public void onAuthenticationHelp(int helpMsgId, CharSequence helpString) {
-        Toast.makeText(context, "Authentication help\n" + helpString, Toast.LENGTH_LONG).show();
+      //  Toast.makeText(context, "Authentication help\n" + helpString, Toast.LENGTH_LONG).show();
     }@Override
 
     //onAuthenticationSucceeded is called when a fingerprint has been successfully matched to one of the fingerprints stored on the user’s device//

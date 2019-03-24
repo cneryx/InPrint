@@ -7,14 +7,18 @@
     android:layout_height="match_parent"
     android:background="#000000"
     tools:context=".MainActivity">
+
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:layout_width="362dp"
         android:layout_height="682dp"
         android:layout_above="@id/navigation"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="#000000"
         android:src="@drawable/loading"
-        tools:layout_editor_absoluteX="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
