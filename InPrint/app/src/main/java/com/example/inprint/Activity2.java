@@ -33,6 +33,7 @@ public class Activity2 extends AppCompatActivity {
             return false;
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,9 +57,9 @@ public class Activity2 extends AppCompatActivity {
                 emaile.setText("");
                 websitee.setText("");
                 String fullJson = PassId.buildJson(
-                    PassId.buildFragment(website, email, password)
+                        PassId.buildFragment(website, email, password)
                 );
-
+                
             }
         });
     }

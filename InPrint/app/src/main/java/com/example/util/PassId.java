@@ -24,7 +24,7 @@ public class PassId {
     @Override
     public String toString() {
         return String.format(
-                "\"%s\" :{\n" +
+                "\"%s\" : {\n" +
                         "\t\"email\" : \"%s\",\n" +
                         "\t\"password\" : \"%s\"\n" +
                         "}",
