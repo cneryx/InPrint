@@ -1,6 +1,6 @@
 {
   "name": "InPrint",
-  "description": "Kill me",
+  "description": "Automatically enter in passwords and emails through your phone.",
   "version": "0.1",
   "manifest_version": 2,
   "browser_action": {
