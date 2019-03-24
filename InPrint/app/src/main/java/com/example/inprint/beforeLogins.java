@@ -39,8 +39,9 @@ import javax.crypto.SecretKey;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class Activity1 extends AppCompatActivity {
+public class beforeLogins extends AppCompatActivity {
     boolean done = false;
+    boolean loggedIn = false;
     private TextView mTextMessage;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,7 +52,7 @@ public class Activity1 extends AppCompatActivity {
                 case R.id.navigation_home:
                     return true;
                 case R.id.navigation_dashboard:
-                    Intent intent = new Intent(Activity1.this, Activity2.class);
+                    Intent intent = new Intent(beforeLogins.this, Activity2.class);
                     intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;

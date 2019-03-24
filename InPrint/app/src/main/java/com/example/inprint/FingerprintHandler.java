@@ -6,17 +6,19 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
 import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+import pl.droidsonroids.gif.GifImageView;
 
+public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+    public boolean authenticed = false;
     private CancellationSignal cancellationSignal;
     private Context context;
     public FingerprintHandler(Context mContext) {
         context = mContext;
     }
     public void startAuth(FingerprintManager manager, FingerprintManager.CryptoObject cryptoObject) {
-
         cancellationSignal = new CancellationSignal();
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -41,7 +43,10 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
     //onAuthenticationSucceeded is called when a fingerprint has been successfully matched to one of the fingerprints stored on the user’s device//
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
-
         Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+        authenticed = true;
+    }
+    public boolean isAuthenticed(){
+        return authenticed;
     }
 }
