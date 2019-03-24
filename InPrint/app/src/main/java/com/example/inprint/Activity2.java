@@ -79,10 +79,15 @@ public class Activity2 extends AppCompatActivity {
                         PassId.buildFragment(website, email, password)
                 );
                 File saves = new File(Activity2.getAppcontext().getFilesDir(), "saves.txt");
+                File readsaves = new File(Activity2.getAppcontext().getFilesDir(), "readsaves.txt");
                 try {
                     PrintWriter pw = new PrintWriter(new FileWriter(saves, true));
+                    PrintWriter pw1 = new PrintWriter(new FileWriter(readsaves,true));
                     pw.println();
                     pw.println(fullJson);
+                    pw1.println(website + " | " + email);
+                    pw1.flush();
+                    pw1.close();
                     pw.flush();
                     pw.close();
                     Scanner in = new Scanner(saves);
@@ -94,6 +99,15 @@ public class Activity2 extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+
+            }
+        });
+        Button credmenu = findViewById(R.id.credmenu);
+        credmenu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity2.this, ListCred.class);
+                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
 
             }
         });
