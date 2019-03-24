@@ -124,11 +124,7 @@ public class Activity1 extends AppCompatActivity {
         while(true) {
             if(helper.isAuthenticed()) {
                 GifImageView img = (GifImageView) findViewById(R.id.gifImageView);
-                if (!done) {
-                    img.setImageResource(R.drawable.correct);
-                    done = true;
-                }
-                img.setImageResource(R.drawable.correcthold);
+                img.setImageResource(R.drawable.correct);
                 break;
             }
         }

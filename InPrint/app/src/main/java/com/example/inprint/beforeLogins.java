@@ -40,8 +40,6 @@ import javax.crypto.SecretKey;
 import pl.droidsonroids.gif.GifImageView;
 
 public class beforeLogins extends AppCompatActivity {
-    boolean done = false;
-    boolean loggedIn = false;
     private TextView mTextMessage;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -72,7 +70,6 @@ public class beforeLogins extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1);
         mTextMessage = (TextView) findViewById(R.id.message);
@@ -125,7 +122,6 @@ public class beforeLogins extends AppCompatActivity {
         while(true) {
             if(helper.isAuthenticed()) {
                 GifImageView img = (GifImageView) findViewById(R.id.gifImageView);
-                done = true;
                 Intent intent = new Intent (beforeLogins.this, Activity2.class);
                 intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
