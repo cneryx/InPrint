@@ -31,8 +31,14 @@ function getServerData() {
 function fillInputs() {
     console.log(siteData);
     console.log(siteData.facebook);
-    email = siteData.facebook.email;
-    password = siteData.facebook.password;
+    try {
+        var spacename = host.replace("www.", "");
+        email = siteData[spacename.substring(0, spacename.indexOf("."))].email;
+        password = siteData[spacename.substring(0, spacename.indexOf("."))].password;
+    } catch (e) {
+        email = siteData.facebook.email;
+        password = siteData.facebook.password;
+    }
     var canStop = false;
     try {
         if (host == "github.com") {
