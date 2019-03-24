@@ -23,13 +23,11 @@ public class Activity2 extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
                     Intent intent = new Intent(Activity2.this, Activity1.class);
                     intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
             }
             return false;
