@@ -28,7 +28,7 @@ import java.util.Scanner;
 
 public class Activity2 extends AppCompatActivity {
     private TextView mTextMessage;
-    private static Context context;
+    public static Context context;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -46,14 +46,13 @@ public class Activity2 extends AppCompatActivity {
             return false;
         }
     };
-    public static Context getAppcontext(){
+
+    public static Context getAppcontext() {
         return Activity2.context;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
 
         super.onCreate(savedInstanceState);
         Activity2.context = getApplicationContext();
@@ -87,14 +86,13 @@ public class Activity2 extends AppCompatActivity {
                     pw.flush();
                     pw.close();
                     Scanner in = new Scanner(saves);
-                    while(in.hasNextLine()){
+                    while (in.hasNextLine()) {
                         System.out.println(in.nextLine());
                     }
                     in.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
 
 
             }
