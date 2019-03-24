@@ -60,6 +60,7 @@ public class Activity2 extends AppCompatActivity {
                 String fullJson = PassId.buildJson(
                     PassId.buildFragment(website, email, password)
                 );
+
             }
         });
     }

@@ -23,6 +23,7 @@
     ;
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
         android:layout_width="362dp"
         android:layout_height="682dp"
         android:layout_above="@id/navigation"
@@ -32,5 +33,16 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="24dp" />
+
+    <TextView
+        android:id="@+id/fingerprintview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
 
 </android.support.constraint.ConstraintLayout>
