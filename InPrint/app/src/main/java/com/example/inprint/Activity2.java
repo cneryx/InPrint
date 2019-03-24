@@ -81,6 +81,7 @@ public class Activity2 extends AppCompatActivity {
                 File saves = new File(Activity2.getAppcontext().getFilesDir(), "saves.txt");
                 try {
                     PrintWriter pw = new PrintWriter(new FileWriter(saves, true));
+                    pw.println();
                     pw.println(fullJson);
                     pw.flush();
                     pw.close();
@@ -88,6 +89,7 @@ public class Activity2 extends AppCompatActivity {
                     while(in.hasNextLine()){
                         System.out.println(in.nextLine());
                     }
+                    in.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
