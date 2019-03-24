@@ -1,6 +1,7 @@
 var data = {greeting: 'hello!'};
+var siteData;
 
-fetch("http://127.0.0.1:5000/test.json", {
+fetch("http://127.0.0.1:5000/test.html", {
     headers:{
         'Content-Type': 'application/json'
     }})
