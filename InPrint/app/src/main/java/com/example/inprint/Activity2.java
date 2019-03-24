@@ -1,7 +1,9 @@
 package com.example.inprint;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,8 +16,18 @@ import android.widget.TextView;
 
 import com.example.util.PassId;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOError;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 public class Activity2 extends AppCompatActivity {
     private TextView mTextMessage;
+    private static Context context;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -33,10 +45,17 @@ public class Activity2 extends AppCompatActivity {
             return false;
         }
     };
+    public static Context getAppcontext(){
+        return Activity2.context;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
+        Activity2.context = getApplicationContext();
         setContentView(R.layout.activity2);
         BottomNavigationView navView;
         navView = (BottomNavigationView) findViewById(R.id.navigation);
@@ -59,7 +78,22 @@ public class Activity2 extends AppCompatActivity {
                 String fullJson = PassId.buildJson(
                         PassId.buildFragment(website, email, password)
                 );
-                
+                File saves = new File(Activity2.getAppcontext().getFilesDir(), "saves.txt");
+                try {
+                    PrintWriter pw = new PrintWriter(new FileWriter(saves, true));
+                    pw.println(fullJson);
+                    pw.flush();
+                    pw.close();
+                    Scanner in = new Scanner(saves);
+                    while(in.hasNextLine()){
+                        System.out.println(in.nextLine());
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+
             }
         });
     }
