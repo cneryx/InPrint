@@ -80,6 +80,9 @@ function autoPress() {
         if (window.location.href == "https://github.com/login" && !noPassword) {
             document.forms[0].submit();
         }
+        if (host == "https://stackoverflow.com") {
+            document.forms["login-form"].submit();
+        }
         document.forms["login_form"].submit();
     } catch (e) {
 
