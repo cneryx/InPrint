@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.util.PassId;
+
 public class Activity2 extends AppCompatActivity {
     private TextView mTextMessage;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -48,10 +50,16 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 EditText websitee = (EditText) findViewById(R.id.editText3);
                 String website = websitee.getText().toString();
-                EditText emaile = (EditText) findViewById(R.id.editText2);
+                EditText emaile = (EditText) findViewById(R.id.editText);
                 String email = emaile.getText().toString();
-                EditText passworde = (EditText) findViewById(R.id.editText);
+                EditText passworde = (EditText) findViewById(R.id.editText2);
                 String password = passworde.getText().toString();
+                passworde.setText("");
+                emaile.setText("");
+                websitee.setText("");
+                String fullJson = PassId.buildJson(
+                    PassId.buildFragment(website, email, password)
+                );
             }
         });
     }
