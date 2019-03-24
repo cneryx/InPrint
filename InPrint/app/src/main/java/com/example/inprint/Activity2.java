@@ -7,6 +7,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Activity2 extends AppCompatActivity {
@@ -40,5 +43,16 @@ public class Activity2 extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        Button button = (Button) findViewById(R.id.dataEnterButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText websitee = (EditText) findViewById(R.id.editText3);
+                String website = websitee.getText().toString();
+                EditText emaile = (EditText) findViewById(R.id.editText2);
+                String email = emaile.getText().toString();
+                EditText passworde = (EditText) findViewById(R.id.editText);
+                String password = passworde.getText().toString();
+            }
+        });
     }
 }
